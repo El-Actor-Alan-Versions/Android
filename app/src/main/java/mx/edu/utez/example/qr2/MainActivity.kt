@@ -13,6 +13,7 @@ import mx.edu.utez.example.qr2.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    //Variable publica para poder almacenar el valor a mandar
     var valorQr = "";
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnScanner.setOnClickListener {
+            //Esto es para configurar el scan
             val options = ScanOptions()
             options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES)
             options.setPrompt("Scan a barcode")
@@ -37,18 +39,12 @@ class MainActivity : AppCompatActivity() {
     private val barcodeLauncher = registerForActivityResult<ScanOptions, ScanIntentResult>(
         ScanContract()
     ) { result: ScanIntentResult ->
+        //Para revisar si se se encontro algo, o si le dan retroceder
         if (result.contents == null) {
             Toast.makeText(this@MainActivity, "Cancelled", Toast.LENGTH_LONG).show()
         } else {
 
-
-
-            Toast.makeText(
-                this@MainActivity,
-                "Scanned: " + result.contents,
-                Toast.LENGTH_LONG
-            ).show()
-
+        //Para mandar a la sig pagina
             valorQr = result.contents;
             val intent = Intent(this,MainActivity2::class.java)
             intent.putExtra("qr_result",valorQr)

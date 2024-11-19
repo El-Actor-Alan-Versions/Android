@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    // Esta es la nueva libreria
     implementation(libs.zxing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
