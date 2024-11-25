@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnScanner.setOnClickListener {
+        /*binding.btnScanner.setOnClickListener {
             //Esto es para configurar el scan
             val options = ScanOptions()
             options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             barcodeLauncher.launch(options)
 
 
-        }
+        }*/
 
 
     }

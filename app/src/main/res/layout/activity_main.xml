@@ -8,12 +8,29 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FDFDFD"
+        android:fontFamily="@font/poppins"
+        android:text="Crear cuenta"
+        android:textColor="#023059"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnIniciar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciar"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciar"
+        app:strokeColor="#023059"
+        app:strokeWidth="1dp" />
+
+    <Button
         android:id="@+id/btnIniciar"
         android:layout_width="250dp"
         android:layout_height="62dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#030A8C"
-        android:fontFamily="@font/poppins_thin"
+        android:fontFamily="@font/poppins"
         android:includeFontPadding="true"
         android:text="Iniciar sesión"
         android:textColorLink="#030A8C"
